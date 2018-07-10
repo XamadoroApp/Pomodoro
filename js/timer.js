@@ -3,10 +3,11 @@ let start = document.getElementById('start-button');
 let stop = document.getElementById('stop-button');
 let timer = document.getElementById('timer');
 
+var startMins = 30
+
 // Start timer on click
 start.onclick = function() {
 
-    var startMins = 30
     var countDownDate = (new Date().getTime() + startMins*60000);
 
     // Update the count down every 1 second
@@ -34,5 +35,10 @@ start.onclick = function() {
             timer.innerHTML = "EXPIRED";
         }
     }, 1000);
+
+// Test Stop Button
+stop.onclick = function() {
+    timer.innerHTML = "TEST";
+}
   
 };
