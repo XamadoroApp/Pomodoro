@@ -1,20 +1,7 @@
-// get the buttons by id
-let red = document.getElementById('changeToRed');
-let blue = document.getElementById('changeToBlue');
-let reset = document.getElementById('reset');
+let startbutton = document.getElementById('start-button');
 
-// use tabs.insertCSS to change header color on button click
-// red
-red.onclick = function() {
-  browser.tabs.insertCSS({code: ".c-uhfh .brand-neutral { background: red !important; }"});
-};
+//let resetbutton = document.getElementById('reset');
+//resetbutton.onclick = function() { window.alert("Reset onclick session (placeholder)."); };
 
-// blue
-blue.onclick = function() {
-  browser.tabs.insertCSS({code: ".c-uhfh .brand-neutral { background: blue !important; }"});
-};
-
-// back to original
-reset.onclick = function() {
-  browser.tabs.insertCSS({code: ".c-uhfh .brand-neutral { background: #2f2f2f !important; }"});
-};
+//start button alert
+startbutton.onclick = function() { window.alert("Timer is complete. Take a 5 min break."); };
