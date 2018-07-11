@@ -1,7 +1,8 @@
 // get the HTML elements by id
 let start = document.getElementById('start-button');
-let stopbutton = document.getElementById('stop-button');
-let timertext = document.getElementById('timer');
+//let stopbutton = document.getElementById('stop-button');
+let minutetext = document.getElementById('minute-display');
+let secondtext = document.getElementById('second-display');
 
 // Initial value of start minutes
 var startMins = 1;
@@ -34,7 +35,8 @@ start.onclick = function() {
 
             // Output the result in an element with id="demo"
             //timer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-            timer.innerHTML = minutes + "m " + seconds + "s ";
+            minutetext.innerHTML = minutes;
+            secondtext.innerHTML = seconds;
             
             // If the count down is over, write some text 
             if (distance < 0) {
@@ -46,12 +48,15 @@ start.onclick = function() {
             // If the timer is stopped, stop the timer
             if (stopped == "true"){
                 clearInterval(x);
-                timer.innerHTML = minutes + "m " + seconds + "s ";
+                minutetext.innerHTML = minutes;
+                secondtext.innerHTML = seconds;
             }
         }, 1000);
 };
 
+/*
 // Stop/Reset timer on click
 stopbutton.onclick = function() {
     stopped = "true";
 };
+*/
