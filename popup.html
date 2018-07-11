@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-        <div class="content-wrapper">
-            <h1>Not Working</h1> <!--Working/Break -->
-            <div id="timer">
-                Timer
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body> 
+        <div class="container">
+            <div class=header-wrapper>
+                <div class="extension-name">
+                    <p>Pomodoro</p>
+                </div>
+                <div class=setting-button>
+                    <a href="google.com"><img id="setting-button" src="images/setting-button15.png"></a>
+                </div>
             </div>
-            <div>Tomato Count for progress</div>
-        </div>
-        <div class="button-wrapper">
-            <div class="start-button" id="start-button">
-                <img src="images/start-button.png" title="start-button">
+            <div class="timer-wrapper">
+                <div class="minute-display">
+                    <p>24:</p>
+                </div>
+                <div class="second-display">
+                    <p>59</p>
+                </div>
             </div>
-            <div class="stop-button" id="stop-button">
-                <img src="images/stop-button.png" title="stop-button">
+            <div class="progress-wrapper">
+                <img src="images/color-changer20.png">
+                <img src="images/color-changer20.png">
+                <img src="images/color-changer20.png">
+                <img src="images/color-changer20.png">
+                <img src="images/color-changer20.png">
+                <p id="status">Status: Focus Time</p>
             </div>
-            <div class="setting-button" id="setting-button">
-                <img src="images/setting-button.png" title="setting-button">
-            </div>
+            <div class="footer">
+                <img id="start-button" src="images/start-button.png" >
             
+            </div>
         </div>
-    </div>
-    
-        
-    <div class="footer">
-        <h1>Pomodoro</h1>
-    </div>
-    <script src="js/popup.js"></script>
-  </body>
+        <script src="js/popup.js"></script>
+    </body>
 </html>
