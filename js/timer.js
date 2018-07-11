@@ -7,6 +7,10 @@ let timertext = document.getElementById('timer');
 var startMins = 1;
 var stopped = "true";
 
+// Zero out minutes and seconds
+var minutes = 0;
+var seconds = 0;
+
 // Start timer on click
 
 start.onclick = function() {
@@ -25,8 +29,8 @@ start.onclick = function() {
             // Time calculations for days, hours, minutes and seconds
             //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="demo"
             //timer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
@@ -42,7 +46,7 @@ start.onclick = function() {
             // If the timer is stopped, stop the timer
             if (stopped == "true"){
                 clearInterval(x);
-                timer.innerHTML = "0m 0s"
+                timer.innerHTML = minutes + "m " + seconds + "s ";
             }
         }, 1000);
 };
