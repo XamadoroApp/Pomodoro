@@ -10,7 +10,7 @@
 
 /*Whole Page*/
 .container{
-    height:250px; 
+    height:300px; 
     width:180px;
    
 }
@@ -68,4 +68,7 @@
 .footer{
     text-align: center;
 }
-        
+.settingTest{
+    text-align: center;
+}
+         
