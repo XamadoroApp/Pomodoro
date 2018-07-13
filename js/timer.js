@@ -6,7 +6,7 @@ let timer = document.getElementById('timer');
 // Start timer on click
 start.onclick = function() {
 
-    var startMins = 30
+    var startMins = 60 //nate experiment
     var countDownDate = (new Date().getTime() + startMins*60000);
 
     // Update the count down every 1 second
