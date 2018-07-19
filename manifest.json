@@ -1,6 +1,6 @@
 {
-    "name": "Color Changer",
-    "author": "Microsoft Edge Extension Developer",
+    "name": "Pomodoro",
+    "author": "WDG HSSE Team",
     "version": "1.0",
     "icons": {
         "25": "images/color-changer25.png",

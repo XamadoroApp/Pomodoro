@@ -2,10 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css">
     </head>
-    <body> 
-           
-
+    <body>        
         <div class="container">
             <div class=header-wrapper>
                 <div class="extension-name">
@@ -34,15 +33,20 @@
             <div class="footer">
                 <img id="start-button" src="images/start-button.png" >
             </div>
-            <div class="settingtest">
-            <form name='yourForm' action=""> 
-            Test setting <br/>
-            Default Time: <input id="timesetting-textbox" type="text" name="timesetting">
-            <input id="time-setting-button" type="button" value="Submit">    
-        </form> 
+            <!--<div class="settingtest"></div>-->
+            <div id="setting-popup" title="Settings">
+                <form name="settingForm" action=""> 
+                    
+                    Whitelisted URL: 
+                    <input id="addresses-textbox" type="text" name="addresses-textbox">
+                </form> 
+            </div>
         </div>
-        </div>
+        <script src="js/jquery.min.js"></script> 
+        <script src="js/jquery-ui.js"></script>
         <script src="js/popup.js"></script>
+        <script src="js/settingPopup.js"></script>
         <script src="js/settings.js"></script>
+        
     </body>
 </html>
