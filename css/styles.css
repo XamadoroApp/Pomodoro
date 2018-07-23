@@ -2,7 +2,12 @@
 /* * {
     font-family: 'Segoe UI';
 } */
-
+body{
+    height:300px;
+}
+.ui-dialog {
+    background-color: black;
+}
 @font-face {
     font-family:"Cassandra";
     src: url("../fonts/Cassandra.ttf") /* EOT file for IE */
@@ -10,7 +15,7 @@
 
 /*Whole Page*/
 .container{
-    height:250px; 
+    height:300px; 
     width:180px;
    
 }
@@ -68,4 +73,7 @@
 .footer{
     text-align: center;
 }
-        
+.settingTest{
+    text-align: center;
+}
+         
