@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\js"
+    "\\js",
+    "\\whitelist"
   ],
-  "SelectedNode": "\\js\\whitelist.js",
+  "SelectedNode": "\\manifest.json",
   "PreviewInSolutionExplorer": false
 }
