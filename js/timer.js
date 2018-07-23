@@ -1,12 +1,13 @@
 // get the HTML elements by id
 let start = document.getElementById('start-button');
 //let stopbutton = document.getElementById('stop-button');
-let minutetext = document.getElementById('minute-display');
-let secondtext = document.getElementById('second-display');
+let minutetext = document.getElementById('minutes');
+let secondtext = document.getElementById('seconds');
+//let timertext = document.getElementById('timer');
 let statustext = document.getElementById('status');
 
 // Initial value of start minutes
-var startMins = 1;
+var startMins = 25;
 var stopped = "true";
 
 // Zero out minutes and seconds
@@ -34,9 +35,11 @@ start.onclick = function() {
             minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            minutetext.innerHTML = minutes;
+            //timertext.innerHTML = minutes + ":" + seconds; 
+            
+            minutetext.innerHTML = minutes + ":";
             secondtext.innerHTML = seconds;
-
+            
             
             // If the count down is over, write some text 
             if (distance < 0) {
@@ -44,13 +47,14 @@ start.onclick = function() {
                 statustext.innerHTML = "Cycle Complete";
                 window.alert("Timer is complete. Take a 5 min break.");
             }
-
+            /*
             // If the timer is stopped, stop the timer
             if (stopped == "true"){
                 clearInterval(x);
                 minutetext.innerHTML = minutes;
                 secondtext.innerHTML = seconds;
             }
+            */
         }, 1000);
 };
 

@@ -1,3 +1,5 @@
+
+/*
 // listen for sendMessage() from content script
 browser.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
@@ -12,3 +14,8 @@ browser.runtime.onMessage.addListener(
         // disable browser action for the current tab
         browser.browserAction.disable(sender.tab.id);
     });
+*/
+
+browser.browserAction.onClicked.addListener(function() {
+    browser.windows.create({url:"popup.html",left:50,top:100,type:"popup",width:50,height:250});
+});
