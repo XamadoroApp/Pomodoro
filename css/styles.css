@@ -4,6 +4,7 @@
 } */
 body{
     height:300px;
+	width: 180px;
 }
 .ui-dialog {
     background-color: black;
