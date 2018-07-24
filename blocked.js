@@ -1772,19 +1772,19 @@
     "use strict";
 
     function r() {
-        return window.chrome.runtime.getManifest()
+        return window.browser.runtime.getManifest()
     }
 
     function o() {
-        return window.chrome.extension.getURL.apply(window.chrome.extension, arguments)
+        return window.browser.extension.getURL.apply(window.browser.extension, arguments)
     }
 
     function i() {
-        return window.chrome.i18n.getMessage.apply(window.chrome.i18n, arguments)
+        return window.browser.i18n.getMessage.apply(window.browser.i18n, arguments)
     }
 
     function a() {
-        return window.chrome.storage.sync || window.chrome.storage.local
+        return window.browser.storage.sync || window.browser.storage.local
     }
 
     function s(e, t) {
@@ -1798,18 +1798,18 @@
     }
 
     function u(e) {
-        window.chrome.storage.onChanged.addListener(e)
+        window.browser.storage.onChanged.addListener(e)
     }
 
     function c(e) {
         var t = ["<all_urls>"];
-        window.chrome.webRequest.onBeforeRequest.addListener(e, {
+        window.browser.webRequest.onBeforeRequest.addListener(e, {
             urls: t
         }, ["blocking"])
     }
 
     function p(e, t) {
-        t = o(t), window.chrome.tabs.update(e, {
+        t = o(t), window.browser.tabs.update(e, {
             url: t
         })
     }
@@ -3035,23 +3035,23 @@
         },
         scripts: {
             "clean:coverage": "rimraf coverage/",
-            "clean:chrome": "rimraf dist/chrome/ dist/*-chrome.zip",
+            "clean:browser": "rimraf dist/browser/ dist/*-browser.zip",
             "clean:firefox": "rimraf dist/firefox/ dist/*-firefox.xpi",
             "clean:opera": "rimraf dist/opera/ dist/*-opera.zip",
             clean: "npm-run-all --parallel clean:*",
             "test:lint": "eslint .",
             "test:karma": "karma start --single-run",
             test: "npm-run-all test:*",
-            "watch:chrome": "webpack -w --config webpack.config.chrome.js",
+            "watch:browser": "webpack -w --config webpack.config.browser.js",
             "watch:firefox": "webpack -w --config webpack.config.firefox.js",
             "watch:opera": "webpack -w --config webpack.config.opera.js",
             "watch:karma": "karma start",
             watch: "npm run clean && npm-run-all --parallel watch:*",
-            "build:chrome": "webpack --config webpack.config.chrome.min.js",
+            "build:browser": "webpack --config webpack.config.browser.min.js",
             "build:firefox": "webpack --config webpack.config.firefox.min.js",
             "build:opera": "webpack --config webpack.config.opera.min.js",
             build: "npm run clean && npm-run-all --parallel build:*",
-            "package:chrome": "cd dist/chrome/ && zip -r ../whitelist-manager-chrome.zip *",
+            "package:browser": "cd dist/browser/ && zip -r ../whitelist-manager-browser.zip *",
             "package:firefox": "cd dist/firefox/ && zip -r ../whitelist-manager-firefox.xpi *",
             "package:opera": "cd dist/opera/ && zip -r ../whitelist-manager-opera.zip *",
             "package": "npm run build && npm-run-all --parallel package:*",
@@ -3104,7 +3104,7 @@
             jquery: "^3.0.0",
             "json-loader": "^0.5.4",
             karma: "^1.0.0",
-            "karma-chrome-launcher": "^2.0.0",
+            "karma-browser-launcher": "^2.0.0",
             "karma-coverage": "^1.0.0",
             "karma-firefox-launcher": "^1.0.0",
             "karma-ie-launcher": "^1.0.0",
@@ -6724,14 +6724,14 @@
             var t = new Ct,
                 n = this.Xa + "." + e;
             return this.F.get(n, function(e) {
-                var r = chrome.runtime.lastError;
+                var r = browser.runtime.lastError;
                 r ? t.A(r) : t.G(e[n])
             }), t
         }, er.prototype.set = function(e, t) {
             var n = new Ct,
                 r = {};
             return r[this.Xa + "." + e] = t, this.F.set(r, function() {
-                var e = chrome.runtime.lastError;
+                var e = browser.runtime.lastError;
                 e ? n.A(e) : n.G()
             }), n
         };
@@ -6739,8 +6739,8 @@
         m("goog.async.Deferred", Ct), m("goog.async.Deferred.prototype.addCallback", Ct.prototype.Ub), m("goog.events.EventTarget", Ke), m("goog.events.EventTarget.prototype.listen", Ke.prototype.listen), m("analytics.getService", function(e) {
             var t = tr.get(e, null);
             if (null === t) {
-                var n, t = chrome.runtime.getManifest().version;
-                n = new er(chrome.storage.local, "google-analytics"), n = new $n(n), t = new Yn("ca3", e, t, n), tr.set(e, t)
+                var n, t = browser.runtime.getManifest().version;
+                n = new er(browser.storage.local, "google-analytics"), n = new $n(n), t = new Yn("ca3", e, t, n), tr.set(e, t)
             }
             return t
         }), m("analytics.internal.GoogleAnalyticsService", Yn), m("analytics.internal.GoogleAnalyticsService.prototype.getTracker", Yn.prototype.ac), m("analytics.internal.GoogleAnalyticsService.prototype.getConfig", Yn.prototype.Xb), m("analytics.internal.ServiceSettings", $n), m("analytics.internal.ServiceSettings.prototype.setTrackingPermitted", $n.prototype.gc), m("analytics.internal.ServiceSettings.prototype.isTrackingPermitted", $n.prototype.ab), m("analytics.internal.ServiceSettings.prototype.setSampleRate", $n.prototype.fc), m("analytics.internal.ServiceTracker", vn), m("analytics.internal.ServiceTracker.prototype.send", vn.prototype.send), m("analytics.internal.ServiceTracker.prototype.sendAppView", vn.prototype.bc), m("analytics.internal.ServiceTracker.prototype.sendEvent", vn.prototype.cc), m("analytics.internal.ServiceTracker.prototype.sendSocial", vn.prototype.ec), m("analytics.internal.ServiceTracker.prototype.sendException", vn.prototype.dc), m("analytics.internal.ServiceTracker.prototype.sendTiming", vn.prototype.hb), m("analytics.internal.ServiceTracker.prototype.startTiming", vn.prototype.hc), m("analytics.internal.ServiceTracker.Timing", yn), m("analytics.internal.ServiceTracker.Timing.prototype.send", yn.prototype.send), m("analytics.internal.ServiceTracker.prototype.forceSessionStart", vn.prototype.Wb), m("analytics.internal.ServiceTracker.prototype.getEventTarget", vn.prototype.Yb), m("analytics.HitTypes.APPVIEW", "appview"), m("analytics.HitTypes.EVENT", "event"), m("analytics.HitTypes.SOCIAL", "social"), m("analytics.HitTypes.TRANSACTION", "transaction"), m("analytics.HitTypes.ITEM", "item"), m("analytics.HitTypes.TIMING", "timing"), m("analytics.HitTypes.EXCEPTION", "exception"), m("analytics.Tracker.HitEvent", nn), m("analytics.Tracker.HitEvent.EVENT_TYPE", "a"), m("analytics.Tracker.HitEvent.prototype.getHitType", nn.prototype.$b), m("analytics.Tracker.HitEvent.prototype.getHit", nn.prototype.Zb), k(B, function(e) {
@@ -6809,7 +6809,7 @@
 
     function u() {
         var e = navigator.userAgent;
-        return (e.indexOf("Android 2.") === -1 && e.indexOf("Android 4.0") === -1 || e.indexOf("Mobile Safari") === -1 || e.indexOf("Chrome") !== -1 || e.indexOf("Windows Phone") !== -1) && (window.history && "pushState" in window.history)
+        return (e.indexOf("Android 2.") === -1 && e.indexOf("Android 4.0") === -1 || e.indexOf("Mobile Safari") === -1 || e.indexOf("browser") !== -1 || e.indexOf("Windows Phone") !== -1) && (window.history && "pushState" in window.history)
     }
 
     function c() {

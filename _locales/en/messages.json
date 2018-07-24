@@ -1,6 +1,6 @@
 {
    "ext_description": {
-      "message": "Automatically blocks all pages from any website that is not in your list of allowed websites."
+      "message": "A fun extension that allows you to focus by implementing the pomodoro technique :)"
    },
    "ext_name": {
       "message": "Pomodoro"
@@ -20,7 +20,7 @@
       "message": "Close"
    },
    "msg_blocked_page_label": {
-      "message": "This is focus time, so the website has been blocked"
+      "message": "This is focus time!! cant enter this webpage"
    },
    "msg_header_about": {
       "message": "About..."
@@ -32,6 +32,6 @@
       "message": "Pomodoro"
    },
    "msg_options_whitelist_label": {
-      "message": "List of allowed websites"
+      "message": "Check this box to begin whitelisting"
    }
 }
