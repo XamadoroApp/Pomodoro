@@ -6222,13 +6222,6 @@
                             default.createElement("label", {
                                     className: "app-options__option"
                                 }, p.
-                                default.createElement("input", {
-                                    type: "checkbox",
-                                    id: "app-options-block-others",
-                                    className: "app-options__checkbox",
-                                    checked: n,
-                                    onChange: this.handleChangeBlockOthers
-                                }), p.
                                 default.createElement("span", {
                                     className: "app-options__label"
                                 }, (0, f.t)("msg_options_block_others_label"))), p.
@@ -6248,13 +6241,6 @@
                             default.createElement("label", {
                                     className: "app-options__option"
                                 }, p.
-                                default.createElement("input", {
-                                    type: "checkbox",
-                                    id: "app-options-analytics",
-                                    className: "app-options__checkbox",
-                                    checked: o,
-                                    onChange: this.handleChangeAnalytics
-                                }), p.
                                 default.createElement("span", {
                                     className: "app-options__label"
                                 }, (0, f.t)("msg_options_analytics_label"))))
