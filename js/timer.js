@@ -1,66 +1,29 @@
 // get the HTML elements by id
 let start = document.getElementById('start-button');
-//let stopbutton = document.getElementById('stop-button');
 let minutetext = document.getElementById('minutes');
 let secondtext = document.getElementById('seconds');
-//let timertext = document.getElementById('timer');
-let statustext = document.getElementById('status');
 
-// Initial value of start minutes
-var startMins = 25;
-var stopped = "true";
+// Set timer status
+var timerStopped = true;
 
-// Zero out minutes and seconds
-var minutes = 0;
-var seconds = 0;
+// Send the start message on start click
+start.onclick = function(){
+	if (timerStopped){
+		// timer started
+		timerStopped = false;
+		// send start message
+		browser.runtime.sendMessage(
+			{action: "start"}, function(response){
 
-// Start timer on click
+		});
+	}
+}
 
-start.onclick = function() {
-    stopped = "false";
-        var countDownDate = (new Date().getTime() + startMins*60000);
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-            
-            // Get todays date and time
-            var now = new Date().getTime();
+// Create message listener
+browser.runtime.onMessage.addListener(messageReceived);
 
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            //timertext.innerHTML = minutes + ":" + seconds; 
-            
-            minutetext.innerHTML = minutes + ":";
-            secondtext.innerHTML = seconds;
-            
-            
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                statustext.innerHTML = "Cycle Complete";
-                window.alert("Timer is complete. Take a 5 min break.");
-            }
-            /*
-            // If the timer is stopped, stop the timer
-            if (stopped == "true"){
-                clearInterval(x);
-                minutetext.innerHTML = minutes;
-                secondtext.innerHTML = seconds;
-            }
-            */
-        }, 1000);
-};
-
-/*
-// Stop/Reset timer on click
-stopbutton.onclick = function() {
-    stopped = "true";
-};
-*/
+// Receive updates from timer
+function messageReceived(msg){
+	minutetext.innerHTML = msg.minUpdate + ":";
+	secondtext.innerHTML = msg.secUpdate;
+}
