@@ -1,8 +1,7 @@
 {
    "background": {
 	 
-      "page": "background.html",
-	   "persistent": true
+      "page": "background.html"
 
    },
    "default_locale": "en",
@@ -11,8 +10,10 @@
     "25": "images/color-changer25.png",
     "48": "images/color-changer48.png"
    },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDtl0hxFtoyBy4Un3zdrSmxt3ymndHvAMf/iTP/WeiRtJAGohGcVz8vPGZBWIjV5mnttL5Z+imrp5mrjaacTYE/uKSy3L8zymy/mRGtQ2hq4eCK9ZNYS3j28lBcXuygeW30JE2MCo1h5BuSeSBoWAIKmcao3ekneGV1kkOlXZwpDwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "45.0",
    "name": "__MSG_ext_name__",
-   "author": "WDG HSSE Team",
    "options_ui": {
  
       "page": "options.html"

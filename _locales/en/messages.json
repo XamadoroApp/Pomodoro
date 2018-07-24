@@ -1,0 +1,37 @@
+{
+   "ext_description": {
+      "message": "Automatically blocks all pages from any website that is not in your list of allowed websites."
+   },
+   "ext_name": {
+      "message": "Pomodoro"
+   },
+   "locale": {
+      "message": "en"
+   },
+   "msg_about_dialog_author_label": {
+      "message": "Developed with love by $AUTHOR$.",
+      "placeholders": {
+         "author": {
+            "content": "$1"
+         }
+      }
+   },
+   "msg_about_dialog_close_button": {
+      "message": "Close"
+   },
+   "msg_blocked_page_label": {
+      "message": "This is focus time, so the website has been blocked"
+   },
+   "msg_header_about": {
+      "message": "About..."
+   },
+   "msg_options_block_pages_label": {
+      "message": ""
+   },
+   "msg_options_instructions_label": {
+      "message": "Pomodoro"
+   },
+   "msg_options_whitelist_label": {
+      "message": "List of allowed websites"
+   }
+}
