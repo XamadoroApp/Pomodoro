@@ -10,18 +10,21 @@
                 <div class="extension-name">
                     <p>Pomodoro</p>
                 </div>
+
                 <div class=setting-button>
                     <a href="google.com"><img id="setting-button" src="images/setting-button15.png"></a>
                 </div>
             </div>
+            
             <div class="timer-wrapper">
                 <div class="minute-display">
-                    <p>24:</p>
+                    <p id=minutes>00:</p>
                 </div>
                 <div class="second-display">
-                    <p>59</p>
+                    <p id=seconds>00</p>
                 </div>
             </div>
+            
             <div class="progress-wrapper">
                 <img src="images/color-changer20.png">
                 <img src="images/color-changer20.png">
@@ -30,6 +33,7 @@
                 <img src="images/color-changer20.png">
                 <p id="status">Status: Focus Time</p>
             </div>
+            
             <div class="footer">
                 <img id="start-button" src="images/start-button.png" >
             </div>
@@ -41,13 +45,15 @@
                     <input id="addresses-textbox" type="text" name="addresses-textbox">
                 </form> 
             </div>
+        
         </div>
         <script src="js/jquery.min.js"></script> 
         <script src="js/jquery-ui.js"></script>
         <script src="js/popup.js"></script>
         <script src="js/settingPopup.js"></script>
         <script src="js/settings.js"></script>
-		<script src="whitelist/convert.js"></script>
+        <script src="whitelist/convert.js"></script>
+        <script src="js/timer.js"></script>
         
     </body>
 </html>
