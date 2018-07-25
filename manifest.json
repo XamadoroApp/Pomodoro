@@ -23,7 +23,7 @@
    },
    "permissions": [ "storage", "tabs", "webRequest", "webRequestBlocking", "http://*/*", "https://*/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.3.0",
+   "version": "1",
 
    "browser_action": {
 
