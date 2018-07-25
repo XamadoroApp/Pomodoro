@@ -1,0 +1,37 @@
+{
+   "ext_description": {
+      "message": "A fun extension that allows you to focus by implementing the pomodoro technique :)"
+   },
+   "ext_name": {
+      "message": "Pomodoro"
+   },
+   "locale": {
+      "message": "en"
+   },
+   "msg_about_dialog_author_label": {
+      "message": "Developed with love by $AUTHOR$.",
+      "placeholders": {
+         "author": {
+            "content": "$1"
+         }
+      }
+   },
+   "msg_about_dialog_close_button": {
+      "message": "Close"
+   },
+   "msg_blocked_page_label": {
+      "message": "This is focus time!! cant enter this webpage"
+   },
+   "msg_header_about": {
+      "message": "About..."
+   },
+   "msg_options_block_pages_label": {
+      "message": ""
+   },
+   "msg_options_instructions_label": {
+      "message": "Pomodoro"
+   },
+   "msg_options_whitelist_label": {
+      "message": "Check the box to begin your focus time"
+   }
+}
