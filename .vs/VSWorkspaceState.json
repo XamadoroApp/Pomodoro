@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
+    "\\fonts",
+    "\\images",
     "\\js",
-    "\\whitelist"
+    "\\_locales",
+    "\\_locales\\en"
   ],
   "SelectedNode": "\\manifest.json",
   "PreviewInSolutionExplorer": false
