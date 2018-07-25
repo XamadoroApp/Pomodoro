@@ -32,6 +32,6 @@
       "message": "Pomodoro"
    },
    "msg_options_whitelist_label": {
-      "message": "Check this box to begin whitelisting"
+      "message": "Check the box to begin your focus time"
    }
 }

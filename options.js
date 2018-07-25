@@ -1940,7 +1940,7 @@
             c = n(64),
             p = (n(2), n(4), {
                 button: !0,
-                checkbox: !0,
+                checkbox: 0,
                 image: !0,
                 hidden: !0,
                 radio: !0,
